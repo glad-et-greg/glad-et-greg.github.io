@@ -15,6 +15,8 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
+    grunt.loadNpmTasks('grunt-contrib-less');
+
     // Define the configuration for all the tasks
     grunt.initConfig({
 
@@ -45,9 +47,9 @@ module.exports = function (grunt) {
             gruntfile: {
                 files: ['Gruntfile.js']
             },
-            styles: {
-                files: ['<%= config.app %>/styles/{,*/}*.css'],
-                tasks: ['newer:copy:styles', 'autoprefixer']
+            less: {
+                files: ['<%= config.app %>/styles/{,*/}*.less'],
+                tasks: ['less']
             },
             livereload: {
                 options: {
@@ -132,6 +134,20 @@ module.exports = function (grunt) {
                 options: {
                     run: true,
                     urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+                }
+            }
+        },
+
+        less: {
+            dist: {
+                files: {
+                    '<%= config.app %>/styles/main.css': ['<%= config.app %>/styles/main.less']
+                },
+                options: {
+                    sourceMap: true,
+                    sourceMapFilename: '<%= config.app %>/styles/main.css.map',
+                    sourceMapBasepath: '<%= config.app %>/',
+                    sourceMapRootpath: '/'
                 }
             }
         },
@@ -299,6 +315,7 @@ module.exports = function (grunt) {
                 'copy:styles'
             ],
             dist: [
+                'less',
                 'copy:styles',
                 'imagemin',
                 'svgmin'
@@ -314,6 +331,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
+            'less',
             'concurrent:server',
             'autoprefixer',
             'connect:livereload',
@@ -330,6 +348,7 @@ module.exports = function (grunt) {
         if (target !== 'watch') {
             grunt.task.run([
                 'clean:server',
+                'less',
                 'concurrent:test',
                 'autoprefixer'
             ]);
@@ -343,6 +362,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'less',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
