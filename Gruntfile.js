@@ -29,20 +29,12 @@ module.exports = function (grunt) {
 
         // Watches files for changes and runs tasks based on the changed files
         watch: {
-            bower: {
-                files: ['bower.json'],
-                tasks: ['bowerInstall']
-            },
             js: {
                 files: ['<%= config.app %>/scripts/{,*/}*.js'],
                 tasks: ['jshint'],
                 options: {
                     livereload: true
                 }
-            },
-            jstest: {
-                files: ['test/spec/{,*/}*.js'],
-                tasks: ['test:watch']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -51,13 +43,24 @@ module.exports = function (grunt) {
                 files: ['<%= config.app %>/styles/{,*/}*.less'],
                 tasks: ['less']
             },
+            styles: {
+                files: ['./styles/{,*/}*.*','./vendor/{,*/}*.less'],
+                tasks: ['less','copy:styles', 'autoprefixer'],
+                options: {
+                    nospawn: true,
+                    livereload: true
+                }
+            },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
                     '<%= config.app %>/{,*/}*.html',
-                    '.tmp/styles/{,*/}*.css',
+                    '{.tmp,<%= config.app %>}/styles/main.css',
+//                    '.tmp/styles/*//{,*/}*.css',
+                    '{.tmp,<%= config.app %>}/scripts/{,*/}*.js',
+                    '{.tmp,<%= config.app %>}/styles/{,*/}*.css',
                     '<%= config.app %>/images/{,*/}*'
                 ]
             }
@@ -309,9 +312,11 @@ module.exports = function (grunt) {
         // Run some tasks in parallel to speed up build process
         concurrent: {
             server: [
+                'less',
                 'copy:styles'
             ],
             test: [
+                'less',
                 'copy:styles'
             ],
             dist: [
