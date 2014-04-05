@@ -12,16 +12,16 @@
     <title>Gladys et Gregory</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="../favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <!-- endbuild -->
 </head>
 <body>
@@ -40,7 +40,7 @@
             <div class="col-sm-offset-2 col-sm-8">
 
           <div class="text-right">
-              <img src="images/logoGG.png" style="width: 537px; margin: 10px;">
+              <img src="../images/logoGG.png" style="width: 537px; margin: 10px;">
           </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
 
                 <ul class="nav nav-pills nav-stacked">
                     <li>
-                        <a href="index.html">
+                        <a href="../index.html">
                           <span class="fa-stack fa-lg">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-home fa-stack-1x fa-inverse"></i>
@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="items/directions.html">
+                        <a href="directions.html">
                        <span class="fa-stack fa-lg">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa  fa-location-arrow fa-stack-1x fa-inverse"></i>
@@ -68,7 +68,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="items/the_place.html">
+                        <a href="the_place.html">
                         <span class="fa-stack fa-lg">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
@@ -86,7 +86,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="items/hosting.html">
+                        <a href="#">
                         <span class="fa-stack fa-lg">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
@@ -109,23 +109,7 @@
 
             <div class="col-sm-5">
 
-                <p style="text-align: justify; margin-top: 13px;">
-                    Bonjour à tous!<br/>
-                    <br/>
-                    Soyez les bienvenus sur notre site !<br/>
-                    Vous trouverez donc ici toutes les infos pratiques pour le jour J.<br/>
-                    <br/>
-                    Vous pourrez prendre connaissance du déroulé de la journée avec les lieux de rendez-vous, quelques suggestions d'hébergements à proximité, vous pourrez aussi calculer votre itinéraire, participer à la rubrique covoiturage, laisser de nombreux messages sur notre livre d'or, partager avec nous les titres qui vous feront danser jusqu'au bout de la nuit...<br/>
-                    <br/>
-                    Pour celles et ceux qui le souhaitent, notre liste de mariage est également accessible sur le site.<br/>
-                    Nous nous réjouissons d'avance de vous retrouver pour cette belle journée de fête.<br/>
-                    Après le mariage, venez découvrir quelques photos et profitez des 30 tirages offerts par personne !<br/>
-                    <br/>
-                    <br/>
-                    Grosses bises à tous et bonne visite !!!
-                    <br/>
-                    Gladys & Grégory
-                </p>
+                <div id="map-canvas"></div>
             </div>
         </div>
 
@@ -143,7 +127,7 @@
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -166,22 +150,36 @@
 </script>
 
 <!-- build:js scripts/plugins.js -->
-<script src="bower_components/bootstrap/js/affix.js"></script>
-<script src="bower_components/bootstrap/js/alert.js"></script>
-<script src="bower_components/bootstrap/js/dropdown.js"></script>
-<script src="bower_components/bootstrap/js/tooltip.js"></script>
-<script src="bower_components/bootstrap/js/modal.js"></script>
-<script src="bower_components/bootstrap/js/transition.js"></script>
-<script src="bower_components/bootstrap/js/button.js"></script>
-<script src="bower_components/bootstrap/js/popover.js"></script>
-<script src="bower_components/bootstrap/js/carousel.js"></script>
-<script src="bower_components/bootstrap/js/scrollspy.js"></script>
-<script src="bower_components/bootstrap/js/collapse.js"></script>
-<script src="bower_components/bootstrap/js/tab.js"></script>
+<script src="../bower_components/bootstrap/js/affix.js"></script>
+<script src="../bower_components/bootstrap/js/alert.js"></script>
+<script src="../bower_components/bootstrap/js/dropdown.js"></script>
+<script src="../bower_components/bootstrap/js/tooltip.js"></script>
+<script src="../bower_components/bootstrap/js/modal.js"></script>
+<script src="../bower_components/bootstrap/js/transition.js"></script>
+<script src="../bower_components/bootstrap/js/button.js"></script>
+<script src="../bower_components/bootstrap/js/popover.js"></script>
+<script src="../bower_components/bootstrap/js/carousel.js"></script>
+<script src="../bower_components/bootstrap/js/scrollspy.js"></script>
+<script src="../bower_components/bootstrap/js/collapse.js"></script>
+<script src="../bower_components/bootstrap/js/tab.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({app,.tmp}) scripts/main.js -->
-<script src="scripts/main.js"></script>
+<script src="../scripts/main.js"></script>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu3Ojk4fL3ijNzjmgOA6xrscXdF5cHPew&sensor=false">
+</script>
+<script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(44.474106, 4.220307),
+            zoom: 18,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 <!-- endbuild -->
 </body>
 </html>
