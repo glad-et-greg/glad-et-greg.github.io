@@ -6072,4 +6072,7 @@ body {
 .green-icon {
   color: #509e2f;
 }
+.booked > li {
+  color: #c93536;
+}
 /*# sourceMappingURL=/styles/main.css.map */
