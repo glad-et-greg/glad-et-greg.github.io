@@ -17,7 +17,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -32,16 +32,13 @@
 <div id="wrap">
 
     <div class="container">
-        <!--<div class="header text-right">-->
-            <!--&lt;!&ndash;<h1>Gladys et Grégory</h1>&ndash;&gt;-->
-        <!--</div>-->
 
         <div class="row">
             <div class="col-sm-offset-2 col-sm-8">
 
-          <div class="text-right">
-              <img src="../images/logoGG.png" style="width: 537px; margin: 10px;">
-          </div>
+                <div class="text-right">
+                    <img src="../images/logoGG.png" style="width: 537px; margin: 10px;">
+                </div>
             </div>
         </div>
 
@@ -76,7 +73,7 @@
                             Carte - Itinéraire
                         </a>
                     </li>
-                    <li class="active-menu">
+                    <li>
                         <a href="the_place.html">
                         <span class="fa-stack fa-lg">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -85,7 +82,7 @@
                             Lieux
                         </a>
                     </li>
-                    <li>
+                    <li class="active-menu">
                         <a href="married.html">
                   <span class="fa-stack fa-lg">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -126,7 +123,88 @@
 
             <div class="col-sm-5">
 
-                <div id="map-canvas"></div>
+                <address>
+                    <strong>Gladys Lateltin et Grégory Viennot</strong><br>
+                    <span class="fa fa-envelope-o"></span> 17, rue de Bellevue<br>
+                    69410 Champagne-au-Mont-d'Or<br>
+                    Grégory <span class="fa fa-phone"></span> 06.79.68.76.71<br>
+                    Gladys <span class="fa fa-phone"></span> 06.79.64.71.61
+                </address>
+
+                <hr>
+
+                <address>
+                    <strong>Corinne et Xavier Lateltin</strong><br>
+                    <span class="fa fa-envelope-o"></span> 20, rue du Ferroux<br>
+                    69450 Saint-Cyr-au-Mont-d'Or<br>
+                    <span class="fa fa-phone"></span> 04.78.64.07.88<br>
+                    <span class="fa fa-mobile-phone"></span>&nbsp;&nbsp;06.70.87.14.42<br>
+                </address>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <address>
+                            <strong>Gilles Viennot</strong><br>
+                            <span class="fa fa-envelope-o"></span> La Gillardière <br>
+                            Le Bois de Combe<br>
+                            07230 Lablachère<br>
+                            <span class="fa fa-phone"></span> 06.10.24.64.00<br>
+                        </address>
+                    </div>
+                    <div class="col-sm-6">
+                        <address>
+                            <strong>Evelyne Rozier</strong><br>
+                            <span class="fa fa-envelope-o"></span> 67, avenue du 8 mai 1945<br>
+                            69500 Bron<br>
+                            <span class="fa fa-phone"></span> 06.50.53.84.85<br>
+                        </address>
+                    </div>
+                </div>
+
+                <hr>
+                <h2>Les Témoins</h2>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <address>
+                            <strong>Benoît Lateltin</strong><br>
+                            <strong>Jean-Charles Lateltin</strong><br>
+                            <span class="fa fa-envelope-o"></span> 20, rue du Ferroux<br>
+                            69450 Saint-Cyr-au-Mont-d'Or<br>
+                            Benoît <span class="fa fa-phone"></span> 06.82.60.39.96<br>
+                            Jean-Charles <span class="fa fa-phone"></span> 06.16.71.60.74
+                        </address>
+                    </div>
+                    <div class="col-sm-6">
+                        <address>
+                            <strong>Claire-Alba Delolmo</strong><br>
+                            <span class="fa fa-envelope-o"></span> 17 rue Ernest Fabregue<br>
+                            69009 Lyon<br>
+                            <span class="fa fa-phone"></span> 06.66.62.90.72<br>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <address>
+                            <strong>Gabriel Galidie</strong><br>
+                            <span class="fa fa-phone"></span> 06.22.48.34.04<br>
+                        </address>
+                    </div>
+                    <div class="col-sm-6">
+                        <address>
+                            <strong>David Galidie</strong><br>
+                            <span class="fa fa-envelope-o"></span> 4, place Gabriel Péri<br>
+                            69007 Lyon<br>
+                            <span class="fa fa-phone"></span> 06.85.52.06.63
+                        </address>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
@@ -149,10 +227,17 @@
 <!-- endbuild -->
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-49747256-1', 'glad-et-greg.fr');
     ga('send', 'pageview');
@@ -176,20 +261,7 @@
 
 <!-- build:js({app,.tmp}) scripts/main.js -->
 <script src="../scripts/main.js"></script>
-<script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu3Ojk4fL3ijNzjmgOA6xrscXdF5cHPew&sensor=false">
-</script>
-<script type="text/javascript">
-    function initialize() {
-        var mapOptions = {
-            center: new google.maps.LatLng(44.474106, 4.220307),
-            zoom: 18,
-            mapTypeId: google.maps.MapTypeId.SATELLITE
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+
 <!-- endbuild -->
 </body>
 </html>

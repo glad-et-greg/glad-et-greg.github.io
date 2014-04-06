@@ -52,23 +52,60 @@ body {
       text-transform: uppercase;
       border-radius: 0;
       border-left: 1px solid @glad-green;
-      &:hover{
+      &:hover {
         border-left-width: 3px;
+      }
+    }
+    &.active-menu {
+      .fa-stack {
+        color: @glad-green;
       }
     }
   }
 
-  .fa-stack{
+  .fa-stack {
     color: @glad-grey;
   }
 
 }
 
-.green-icon{
+.external-content {
+  //  background-color: @glad-grey;
+}
+
+.green-icon {
   color: @glad-green;
 }
 
-
 .booked > li {
   color: #c93536;
+}
+
+hr {
+  border-color: @glad-grey;
+
+  &.thick{
+    border-width: 2px;
+  }
+}
+
+.hosting {
+
+  font-family: "MuseoSans", Arial;
+
+  h1 {
+    font-size: 30px;
+    font-family: "MuseoSans", Arial;
+    p.help-block {
+      font-size: small;
+    }
+  }
+
+  h2 {
+    font-family: "MuseoSans", Arial;
+  }
+
+  .hosting-details {
+    font-size: 12px;
+  }
 }
