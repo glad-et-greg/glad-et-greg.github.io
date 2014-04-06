@@ -13,6 +13,8 @@ module.exports = function (grunt) {
     // show elapsed time at the end
     require('time-grunt')(grunt);
 
+    grunt.loadNpmTasks('grunt-gh-pages');
+
     // configurable paths
     var yeomanConfig = {
         app: require('./bower.json').appPath || 'app',
@@ -117,6 +119,12 @@ module.exports = function (grunt) {
                     sourceMapRootpath: '/'
                 }
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
         },
         // not used since Uglify task does concat,
         // but still available if needed
