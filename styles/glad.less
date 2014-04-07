@@ -1,0 +1,111 @@
+/* -----------------------------------------------
+Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+
+#footer {
+  background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+#map-canvas {
+  height: 400px;
+  width: 100%;
+}
+
+#menu {
+
+  .nav-pills
+   > li {
+    > a {
+      font-size: smaller;
+      font-family: "MuseoSans", "Helvetica Neue", Arial;
+      text-transform: uppercase;
+      border-radius: 0;
+      border-left: 1px solid @glad-green;
+      &:hover {
+        border-left-width: 3px;
+      }
+    }
+    &.active-menu {
+      .fa-stack {
+        color: @glad-green;
+      }
+    }
+  }
+
+  .fa-stack {
+    color: @glad-grey;
+  }
+
+}
+
+.external-content {
+  //  background-color: @glad-grey;
+}
+
+.green-icon {
+  color: @glad-green;
+}
+
+.booked > li {
+  color: #c93536;
+}
+
+hr {
+  border-color: @glad-grey;
+
+  &.thick{
+    border-width: 2px;
+  }
+}
+
+.hosting {
+
+  font-family: "MuseoSans", Arial;
+
+  h1 {
+    font-size: 30px;
+    font-family: "MuseoSans", Arial;
+    p.help-block {
+      font-size: small;
+    }
+  }
+
+  h2 {
+    font-family: "MuseoSans", Arial;
+  }
+
+  .hosting-details {
+    font-size: 12px;
+  }
+}
