@@ -6056,15 +6056,20 @@ body {
   height: 400px;
   width: 100%;
 }
+#menu .nav-pills > li {
+  padding-left: 2px;
+  border-left: 1px solid #509e2f;
+  margin-top: 0;
+}
 #menu .nav-pills > li > a {
   font-size: smaller;
   font-family: "MuseoSans", "Helvetica Neue", Arial;
   text-transform: uppercase;
   border-radius: 0;
-  border-left: 1px solid #509e2f;
 }
-#menu .nav-pills > li > a:hover {
+#menu .nav-pills > li:hover {
   border-left-width: 3px;
+  padding-left: 0;
 }
 #menu .nav-pills > li.active-menu .fa-stack {
   color: #509e2f;

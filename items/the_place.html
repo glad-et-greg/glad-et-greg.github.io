@@ -33,15 +33,15 @@
 
     <div class="container">
         <!--<div class="header text-right">-->
-            <!--&lt;!&ndash;<h1>Gladys et Grégory</h1>&ndash;&gt;-->
+        <!--&lt;!&ndash;<h1>Gladys et Grégory</h1>&ndash;&gt;-->
         <!--</div>-->
 
         <div class="row">
             <div class="col-sm-offset-2 col-sm-8">
 
-          <div class="text-right">
-              <img src="../images/logoGG.png" style="width: 72%; margin: 10px;">
-          </div>
+                <div class="text-right">
+                    <img src="../images/logoGG.png" style="width: 72%; margin: 10px;">
+                </div>
             </div>
         </div>
 
@@ -126,6 +126,54 @@
 
             <div class="col-md-5 col-sm-7 ">
 
+                <div>
+                    <p>
+                        Pour vous donner un petit avant goût des plus beaux sites et des
+                        incontournables du département de l’Ardèche, ou pour trouver un hébergement :
+                    </p>
+                    <ul>
+                        <li><a href="http://www.ardeche-guide.com">www.ardeche-guide.com</a></li>
+                    </ul>
+                </div>
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width: 450px; height: 277px; margin-bottom: 30px">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="../images/the_place/1.png" width="450" height="277">
+                        </div>
+                        <div class="item">
+                            <img src="../images/the_place/2.png" width="450" height="277">
+                        </div>
+                        <div class="item">
+                            <img src="../images/the_place/3.png" width="450" height="277">
+                        </div>
+                        <div class="item">
+                            <img src="../images/the_place/4.png" width="450" height="277">
+                        </div>
+                        <div class="item">
+                            <img src="../images/the_place/5.png" width="450" height="277">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
                 <div id="map-canvas"></div>
             </div>
         </div>
@@ -137,7 +185,7 @@
 
 <div class="footer">
     <div class="container">
-        <p><span class="glyphicon glyphicon-heart green-icon"></span> Gladys et Gregory - 12 juillet 2013</p>
+        <p><span class="glyphicon glyphicon-heart green-icon"></span> Gladys et Gregory - 12 juillet 2014</p>
     </div>
 </div>
 
@@ -149,10 +197,17 @@
 <!-- endbuild -->
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-49747256-1', 'glad-et-greg.fr');
     ga('send', 'pageview');

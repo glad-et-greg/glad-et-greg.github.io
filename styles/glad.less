@@ -45,16 +45,19 @@ body {
 #menu {
 
   .nav-pills
-   > li {
+  > li {
     > a {
       font-size: smaller;
       font-family: "MuseoSans", "Helvetica Neue", Arial;
       text-transform: uppercase;
       border-radius: 0;
-      border-left: 1px solid @glad-green;
-      &:hover {
-        border-left-width: 3px;
-      }
+    }
+    padding-left: 2px;
+    border-left: 1px solid @glad-green;
+    margin-top: 0;
+    &:hover {
+      border-left-width: 3px;
+      padding-left: 0;
     }
     &.active-menu {
       .fa-stack {
@@ -84,7 +87,7 @@ body {
 hr {
   border-color: @glad-grey;
 
-  &.thick{
+  &.thick {
     border-width: 2px;
   }
 }
